@@ -1,0 +1,135 @@
+https://github.com/A-poc/BlueTeam-Tools
+https://github.com/reprise99/Sentinel-Queries
+https://github.com/reprise99/awesome-kql-sentinel
+
+https://talosintelligence.com/vulnerability_reports
+
+https://talosintelligence.com/
+
+https://abuse.ch/
+https://bazaar.abuse.ch/browse/
+https://www.abuseipdb.com/
+https://metadefender.com/
+https://www.filescan.io/scan
+https://urlquery.net/search
+
+https://ti.qianxin.com/en
+
+https://radar.cloudflare.com/scan
+
+https://malpedia.caad.fkie.fraunhofer.de/library
+https://github.com/hslatman/awesome-threat-intelligence
+
+
+pandoc ./Volatility3_Basics.md -f gfm --highlight=breezedark --variable linkcolor=blue -o sample_1.pdf
+
+---
+
+/etc/tmux.conf
+
+unbind C-b
+set-option -g prefix C-q
+bind-key C-q send-prefix
+
+setw -g mode-keys vi
+
+# bind v, y, Escape keys in vi-copy mode
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel "xclip -in -selection clipboard"
+
+# bind <prefix> + p to "paste"
+unbind p
+bind p paste-buffer
+
+#set -g status-style fg=black,bg=#FFFF00
+set -g status-style fg=black,bg=#80ff00
+#set -g status-style fg=black,bg=#53ff1a
+#set -g status-style fg=black,bg=#00ff00
+
+# Use Alt-arrow keys to switch panes
+bind -n C-S-Left select-pane -L
+bind -n C-S-Right select-pane -R
+bind -n C-S-Up select-pane -U
+bind -n C-S-Down select-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+bind-key / copy-mode \; send-key ?
+
+bind-key - kill-window
+bind-key = killp
+bind-key j command-prompt -p "Join pan from:" "join-pane -s :'%%'"
+bind-key s command-prompt -p "Send pane to:" "join-pane -t :'%%'"
+
+set-option -g history-limit 3000
+
+---
+
+alias syncUSB='rsync -av --delete /home/.../Documents/ /media/.../0E8E-04B6/New_OS/ --progress'
+alias syncMEGA='rclone sync ~/Documents/ "remoteMEGA:/docs_backup/" -P'
+
+ntlm() {
+        iconv -f ASCII -t UTF-16LE <(printf "$1") | openssl dgst -md4
+}
+
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+
+. "$HOME/.cargo/env"
+
+PS1='${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}[zsh]:%B%F{blue}~%b%F{reset}%(#.#.$) '
+
+PS1='${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}[%B%F{red}root%b%F{reset}]~%(#.#.#) '
+
+---
+
+/home/.../.msf4/msfconsole.rc
+
+set PROMPT [S:%S J:%J]
+load alias
+alias s "sessions"
+alias j "jobs"
+alias opt "options"
+alias -f r "run -j -z"
+alias -f exp "exploit -j -z"
+alias adv "advanced"
+alias -f ch "channel"
+alias sr "search"
+alias xx "exit"
+alias web "use exploit/multi/script/web_delivery"
+alias mh "use exploit/multi/handler"
+use multi/handler
+set payload windows/x64/meterpreter/reverse_tcp
+set lport 443
+set lhost 0.0.0.0
+clear
+
+---
+
+<!-- TOC section dont edit -->
+**Table of content**
+
+1. [Show interfaces](#show-interfaces)  
+	1.1 [NetworkManager Connections](#networkmanager-connections)
+2. [Start/Stop network interface](#startstop-network-interface)  
+	2.1 [Delete an interface](#delete-an-interface)
+3. [Restart NetworkManager](#restart-networkmanager)
+4. [systemd-network](#systemd-network)
+
+* [Show interfaces](#show-interfaces)  
+	* [NetworkManager Connections](#networkmanager-connections)
+		* [Start/Stop network interface](#startstop-network-interface)
+* [Start/Stop network interface](#startstop-network-interface)  
+	* [Delete an interface](#delete-an-interface)
+* [Restart NetworkManager](#restart-networkmanager)
+* [systemd-network](#systemd-network)
+
+<!-- TOC section dont edit -->
+<!-- for subsection with numbers do not forget the double space after each above section in order to get a nested after -->
+
+---
+
