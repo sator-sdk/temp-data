@@ -1,26 +1,3 @@
-https://github.com/A-poc/BlueTeam-Tools
-https://github.com/reprise99/Sentinel-Queries
-https://github.com/reprise99/awesome-kql-sentinel
-
-https://talosintelligence.com/vulnerability_reports
-
-https://talosintelligence.com/
-
-https://abuse.ch/
-https://bazaar.abuse.ch/browse/
-https://www.abuseipdb.com/
-https://metadefender.com/
-https://www.filescan.io/scan
-https://urlquery.net/search
-
-https://ti.qianxin.com/en
-
-https://radar.cloudflare.com/scan
-
-https://malpedia.caad.fkie.fraunhofer.de/library
-https://github.com/hslatman/awesome-threat-intelligence
-
-
 pandoc ./Volatility3_Basics.md -f gfm --highlight=breezedark --variable linkcolor=blue -o sample_1.pdf
 
 ---
