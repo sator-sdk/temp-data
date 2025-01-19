@@ -590,6 +590,16 @@ http.favicon.hash:<mmh3_hash>
 
 # Organization + favico
 org:"orgname.com" http.favicon.hash:<mmh3_hash>
+
+#-------------------------------------------------------------------------------------
+
+# Filter by HTTP headers and ports to reduce noisy results
+
+'ssl.jarm: port:"" HTTP/1.1 404 Not Found Content-Length: 0'
+
+#-------------------------------------------------------------------------------------
+
+
 ```
 
 ---
